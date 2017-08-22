@@ -187,6 +187,8 @@ class Home extends Component {
                 rating: 0,
                 gan: Object.assign({}, this.state.gan, {noise: noise, noiseOrigin: optionInputs.noise.value, input: noise.concat(label)})
             });
+            console.log(result);
+            return;
         }
 
         //Stat.generate(this.state.options);
