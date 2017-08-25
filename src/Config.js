@@ -76,12 +76,8 @@ var Config = {
         labelLength: 34,
         imageWidth: 128,
         imageHeight: 128,
-        model: '/models/model_resnet_with_condition_128_full_1_8bit',
-        modelServers: debug ? ['localhost:3000'] : [
-            {host: '106.187.49.34:8080', country: 'CN'},
-            //{host: '107.161.27.213', country: 'CN'},
-            'd130f4reeykfib.cloudfront.net'
-        ]
+        model: '/models/model_resnet_with_condition_128_full_1',
+        modelServers: debug ? ['localhost:3000'] : ['maketest.girls.moe']
     },
     stat: {
         enabled: debug ? false : true,

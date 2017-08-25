@@ -22,7 +22,7 @@ class GAN {
     }
 
     async init(onInitProgress) {
-        this.runner = await window.WebDNN.load(Config.gan.model, {progressCallback: onInitProgress, weightDirectory: await GAN.getWeightFilePrefix()});
+        this.runner = await window.WebDNN.load(Config.gan.model, {progressCallback: onInitProgress, weightDirectory: await GAN.getWeightFilePrefix(), backendOrder: ['webgpu', 'webgl', 'webassembly', 'fallback']});
     }
 
     async run(label, noise) {
