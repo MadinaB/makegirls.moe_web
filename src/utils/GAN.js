@@ -32,7 +32,7 @@ class GAN {
         this.runner.getInputViews()[0].set(input);
         await this.runner.run();
         let output = this.runner.getOutputViews()[0].toActual();
-        console.log(output);
+        console.log(JSON.stringify(output));
         return output;
     }
 
